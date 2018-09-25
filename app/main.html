@@ -1,0 +1,315 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Cloud Computing Assignment</title>
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.accordion {
+			    background-color: #eee;
+			    color: #444;
+			    cursor: pointer;
+			    
+			    
+			    border: none;
+			    text-align: left;
+			    outline: none;
+			    font-size: 15px;
+			    transition: 0.4s;
+			}
+
+			.active, .accordion:hover {
+			    background-color: #ccc; 
+			}
+
+			.panel {
+			    padding: 0 18px;
+			    display: none;
+			    background-color: white;
+			    overflow: hidden;
+			}
+		</style>
+		<style>
+			body {font-family: Arial, Helvetica, sans-serif;}
+
+			#myImg1 {
+			    border-radius: 5px;
+			    cursor: pointer;
+			    transition: 0.3s;
+			}
+
+			#myImg1:hover {opacity: 0.7;}
+			#myImg2 {
+			    border-radius: 5px;
+			    cursor: pointer;
+			    transition: 0.3s;
+			}
+
+			#myImg2:hover {opacity: 0.7;}
+
+			/* The Modal (background) */
+			.modall {
+			    display: none; /* Hidden by default */
+			    position: fixed; /* Stay in place */
+			    z-index: 1; /* Sit on top */
+			    padding-top: 100px; /* Location of the box */
+			    left: 0;
+			    top: 0;
+			    width: 100%; /* Full width */
+			    height: 100%; /* Full height */
+			    overflow: auto; /* Enable scroll if needed */
+			    background-color: rgb(0,0,0); /* Fallback color */
+			    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+			}
+
+			/* Modal Content (image) */
+			.modall-content {
+			    margin: auto;
+			    display: block;
+			    width: 85%;
+			    
+			}
+
+			.modall1 {
+			    display: none; /* Hidden by default */
+			    position: fixed; /* Stay in place */
+			    z-index: 1; /* Sit on top */
+			    padding-top: 100px; /* Location of the box */
+			    left: 0;
+			    top: 0;
+			    width: 100%; /* Full width */
+			    height: 100%; /* Full height */
+			    overflow: auto; /* Enable scroll if needed */
+			    background-color: rgb(0,0,0); /* Fallback color */
+			    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+			}
+
+			/* Modal Content (image) */
+			.modall1-content {
+			    margin: auto;
+			    display: block;
+			    width: auto;
+			    
+			}
+
+			/* Caption of Modal Image */
+			#caption {
+			    margin: auto;
+			    display: block;
+			    width: 80%;
+			    max-width: 700px;
+			    text-align: center;
+			    color: #ccc;
+			    padding: 10px 0;
+			    height: 150px;
+			}
+
+			/* Add Animation */
+			.modall-content, #caption {    
+			    -webkit-animation-name: zoom;
+			    -webkit-animation-duration: 0.6s;
+			    animation-name: zoom;
+			    animation-duration: 0.6s;
+			}
+
+			@-webkit-keyframes zoom {
+			    from {-webkit-transform:scale(0)} 
+			    to {-webkit-transform:scale(1)}
+			}
+
+			@keyframes zoom {
+			    from {transform:scale(0)} 
+			    to {transform:scale(1)}
+			}
+
+			/* The Close Button */
+			.close1 {
+			    color: #aaaaaa;
+			    float: right;
+			    padding: 0 5% 0 0;
+			    font-size: 28px;
+			    font-weight: bold;
+			}
+
+			.close1:hover,
+			.close1:focus {
+			    color: #000;
+			    text-decoration: none;
+			    cursor: pointer;
+			}
+
+			/* 100% Image Width on Smaller Screens */
+			@media only screen and (max-width: 700px){
+			    .modal-content {
+			        width: 100%;
+			    }
+			}
+		</style>
+		<style>
+			body {font-family: Arial, Helvetica, sans-serif;}
+
+			/* The Modal (background) */
+			.modal {
+			    display: none; /* Hidden by default */
+			    position: fixed; /* Stay in place */
+			    z-index: 1; /* Sit on top */
+			    padding-top: 100px; /* Location of the box */
+			    left: 0;
+			    top: 0;
+			    width: 100%; /* Full width */
+			    height: 100%; /* Full height */
+			    overflow: auto; /* Enable scroll if needed */
+			    background-color: rgb(0,0,0); /* Fallback color */
+			    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+			}
+
+			/* Modal Content */
+			.modal-content {
+			    background-color: #fefefe;
+			    margin: auto;
+			    padding: 20px;
+			    border: 1px solid #888;
+			    width: 80%;
+			}
+
+			/* The Close Button */
+			.close {
+			    color: #aaaaaa;
+			    float: right;
+			    font-size: 28px;
+			    font-weight: bold;
+			}
+
+			.close:hover,
+			.close:focus {
+			    color: #000;
+			    text-decoration: none;
+			    cursor: pointer;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a class="logo" href="#">Cloud Computing</a>
+			</header>
+
+		
+
+		<!-- Heading -->
+			<div id="heading" style="display: block;">
+				<p style="font-size: 0.01px;"></p>
+				<h1 style="display: block;">Assignment By :-  </h1> 
+				<div >
+					<h2 style="font-family: Times New Roman;">2015A7PS0XXXH Shubham Singhal<br />
+					2015A7PS0107H Rajat Biswas <br /> 
+                    2015A7PS0XXXH Nikhil Joshi<br />
+                	</h2>
+                </div>
+			</div>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<div class="content">
+
+					<!-- Elements -->
+						
+
+									<h1>INDEX</h1>
+									<button class="accordion button primary fit">SaaS</button>
+											<div class="panel" style="border: 1px solid black; padding: 30px">
+									
+										
+											
+											<button class="accordion button wide">Download link for public cloud</button>
+
+											<div class="panel" style="border: 1px solid black; padding: 10px">
+											  <a href="url">link text</a>
+											</div>
+
+
+											<div><p style="font-size: 1px;"><br /></p></div> 
+
+
+											<button class="accordion button wide">Download link for private cloud</button>
+
+											<div class="panel" style="border: 1px solid black; padding: 10px">
+											  <a href="url">link text</a>
+											</div>
+										
+										</div>	
+
+										<div><p style="font-size: 1px;"><br /></p></div>
+
+									<button class="accordion button primary fit">PaaS</button>
+											<div class="panel" style="border: 1px solid black; padding: 30px">
+									
+										
+											
+											<button class="accordion button wide">Link for chat-bot deployed over HEROKU</button>
+
+											<div class="panel" style="border: 1px solid black; padding: 10px">
+											  <a href="url">link text</a>
+											</div>
+
+										</div>
+
+
+										<div><p style="font-size: 1px;"><br /></p></div>
+
+
+									<button class="accordion button primary fit">IaaS</button>
+											<div class="panel" style="border: 1px solid black; padding: 30px">
+									
+										
+											
+											<button class="accordion button wide">Link of IaaS provider</button>
+
+											<div class="panel" style="border: 1px solid black; padding: 10px">
+											  <a href="url">link text</a>
+											</div>
+
+										</div>
+
+							
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+				var acc = document.getElementsByClassName("accordion");
+				var i;
+
+				for (i = 0; i < acc.length; i++) {
+				    acc[i].addEventListener("click", function() {
+				        this.classList.toggle("active");
+				        var panel = this.nextElementSibling;
+				        if (panel.style.display === "block") {
+				            panel.style.display = "none";
+				        } else {
+				            panel.style.display = "block";
+				        }
+				    });
+				}
+			</script>
+			
+			
+	</body>
+</html>
